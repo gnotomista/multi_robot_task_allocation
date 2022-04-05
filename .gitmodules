@@ -1,0 +1,3 @@
+[submodule "include/swarm_sim"]
+	path = include/swarm_sim
+	url = https://github.com/gnotomista/swarm_sim
