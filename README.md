@@ -32,9 +32,9 @@ git submodule update
 To run the mixed centralized-decentralied code in `resilient_task_allocation/mixed_centralized_decentralized`, the `mqtt_matlab_interface` is used to exchange data between two instances of MATLAB running the centralized and decentralied parts of the algorithm at different rates.
 1. Add the main folder of the repository [mqtt_matlab_interface](https://github.com/gnotomista/mqtt_matlab_interface) to the MATLAB path and initialize the MQTT MATLAB interface as described in its [README](https://github.com/gnotomista/mqtt_matlab_interface/blob/master/README.md) file
 2. On one instance of MATLAB, `run rta_central_unit.m`
-3. On a second instance of MATLAB, `run rta_central_unit.m`
+3. On a second instance of MATLAB, `run rta_robots.m`
 
-The script `rta_central_unit.m` receives the robots' state and runs the centralized, slow, and non-convex MIQP. Every time an optimal solution is obtained, the task allocation is communicated to the script `rta_central_unit.m` where the single robots are simulated, and only a convex QP is solved at a faster rate.
+The script `rta_central_unit.m` receives the robots' state and runs the centralized, slow, and non-convex MIQP. Every time an optimal solution is obtained, the task allocation is communicated to the script `rta_robots.m` where the single robots are simulated, and only a convex QP is solved at a faster rate.
 
 ### CVX and Gurobi
 
